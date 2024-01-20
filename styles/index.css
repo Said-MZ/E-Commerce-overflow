@@ -88,6 +88,35 @@ nav {
   align-items: center;
 }
 
+.burger {
+  display: none;
+  z-index: 1000;
+}
+
+.burger div {
+  width: 50px;
+  height: 5px;
+  background-color: var(--text);
+  margin: 7px;
+  transition: all 0.3s ease;
+}
+
+.burger.active div {
+  background-color: var(--secondary);
+}
+
+.burger.active div:nth-child(1) {
+  transform: rotate(-45deg) translate(-11px, 6px);
+}
+
+.burger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active div:nth-child(3) {
+  transform: rotate(45deg) translate(-11px, -6px);
+}
+
 li {
   padding: 0 1rem;
   font-size: 1.2rem;
@@ -112,12 +141,116 @@ a::after {
   width: 100%;
   height: 2px;
   background: var(--lightGrey);
-  transform-origin: left; /* Adjust the transform origin for hover state */
-  transform: scaleX(0); /* Shrink from the right on hover */
+  transform-origin: left;
+  transform: scaleX(0);
   transition: transform 0.3s;
 }
 
 a:hover::after {
-  transform-origin: right; /* Set the transform origin to the right */
-  transform: scaleX(1); /* Initial state: full width */
+  transform-origin: right;
+  transform: scaleX(1);
+}
+
+.small-nav {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3.157rem; /* 50.512px */
+  }
+
+  h2 {
+    font-size: 2.369rem; /* 37.92px */
+  }
+
+  h3 {
+    font-size: 1.777rem; /* 28.48px */
+  }
+
+  h4 {
+    font-size: 1.333rem; /* 21.28px */
+  }
+
+  h5 {
+    font-size: 1rem; /* 16px */
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .small-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .small-nav.active {
+    transform: translateX(0);
+  }
+
+  .small-nav a {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .small-nav a::after {
+    height: 3px;
+    width: 100%;
+  }
+
+  .small-nav a:hover::after {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+
+  .small-nav li:last-child {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .small-nav li {
+    padding: 1rem;
+  }
+
+  .small-nav li:last-child {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .small-nav a:hover {
+    color: var(--lightGrey);
+  }
+
+  .small-nav a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--lightGrey);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .small-nav a:hover::after {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
 }
