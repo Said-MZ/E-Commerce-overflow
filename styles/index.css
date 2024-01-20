@@ -3,7 +3,8 @@
   --text: #fefefe;
   --dark: #191919;
   --grey: #3d3d3d;
-  --secondary: #ff0000;
+  --red: #ff0000;
+  --darkRed: #a40000;
   --lightGrey: #bfbfbf;
 }
 
@@ -80,6 +81,7 @@ nav {
   padding: 4rem 2rem;
   margin: auto;
   height: 80px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .nav-links {
@@ -102,7 +104,7 @@ nav {
 }
 
 .burger.active div {
-  background-color: var(--secondary);
+  background-color: var(--red);
 }
 
 .burger.active div:nth-child(1) {
@@ -154,6 +156,34 @@ a:hover::after {
 .small-nav {
   display: none;
 }
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--darkRed);
+  color: var(--text);
+  font-weight: 700;
+  font-family: "Montserrat";
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+h1 span {
+  background: linear-gradient(90deg, var(--darkRed) 0%, rgb(0, 0, 0, 0) 100%);
+  border-radius: 0.25rem;
+}
 
 @media screen and (max-width: 768px) {
   h1 {
@@ -199,6 +229,7 @@ a:hover::after {
     background-color: rgba(0, 0, 0, 0.8);
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
+    z-index: 999;
   }
 
   .small-nav.active {
@@ -252,5 +283,8 @@ a:hover::after {
   .small-nav a:hover::after {
     transform-origin: right;
     transform: scaleX(1);
+  }
+  .container {
+    padding: 1rem;
   }
 }
