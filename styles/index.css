@@ -1,13 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700|Open%20Sans:400");
 :root {
   --text: #fefefe;
-  --background: #191919;
-  --primary: #3d3d3d;
+  --dark: #191919;
+  --grey: #3d3d3d;
   --secondary: #ff0000;
-  --accent: #bfbfbf;
+  --lightGrey: #bfbfbf;
 }
 
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+} /*16px*/
+
 body {
+  background-color: var(--dark);
+  color: var(--text);
   font-family: "Open Sans";
   font-weight: 400;
 }
@@ -22,8 +36,17 @@ h5 {
 }
 
 html {
-  font-size: 100%;
-} /* 16px */
+  font-size: 100%; /* 16px */
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 h1 {
   font-size: 4.21rem; /* 67.36px */
@@ -47,4 +70,54 @@ h5 {
 
 small {
   font-size: 0.75rem; /* 12px */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  padding: 4rem 2rem;
+  margin: auto;
+  height: 80px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+li {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+
+li:last-child {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+a {
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--lightGrey);
+}
+
+a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--lightGrey);
+  transform-origin: left; /* Adjust the transform origin for hover state */
+  transform: scaleX(0); /* Shrink from the right on hover */
+  transition: transform 0.3s;
+}
+
+a:hover::after {
+  transform-origin: right; /* Set the transform origin to the right */
+  transform: scaleX(1); /* Initial state: full width */
 }

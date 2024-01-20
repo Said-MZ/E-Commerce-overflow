@@ -1,0 +1,14 @@
+header {
+  background-image: url(../assets/heroBg.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: var(--light);
+}
+
+.logo-dark {
+  color: var(--dark);
+}
+
+
