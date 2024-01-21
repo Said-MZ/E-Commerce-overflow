@@ -1,4 +1,4 @@
-// loader
+// || loader:
 
 const loader = document.querySelector(".loader");
 
@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
   loader.style.display = "none";
 });
 
-//navbar
+// || navbar:
 
 const burger = document.querySelector(".burger");
 const smallNav = document.querySelector(".small-nav");
