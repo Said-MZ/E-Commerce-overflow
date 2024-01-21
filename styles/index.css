@@ -215,8 +215,8 @@ a:hover::after {
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  margin: 5rem auto;
-  padding: 0 2rem;
+  margin: auto;
+  padding: 5rem 2rem;
 }
 
 .btn {
@@ -228,7 +228,6 @@ a:hover::after {
   font-family: "Montserrat";
   border: none;
   border-radius: 5px;
-  font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -237,6 +236,48 @@ a:hover::after {
 h1 span {
   background: linear-gradient(90deg, var(--darkRed) 0%, rgb(0, 0, 0, 0) 100%);
   border-radius: 0.25rem;
+}
+
+.banner-container{
+  width: 100vw;
+  overflow: hidden;
+}
+
+.banner {
+  width: 3550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #191919;
+  padding: 1rem 0;
+}
+
+.box {
+  display: inline-block;
+  width: 100%;
+  text-wrap: nowrap;
+  padding: 0 2rem;
+  color: #fefefe;
+  font-family: "Montserrat";
+}
+
+.box strong {
+  padding: 0 0.25rem;
+  background: linear-gradient(90deg, var(--darkRed) 0%, rgb(0, 0, 0, 0) 100%);
+}
+
+.box:first-child {
+  animation: bannermove 50s linear infinite;
+}
+
+@keyframes bannermove {
+  0% {
+    margin-left: 0px;
+    transform: translateX(0);
+  }
+  100% {
+    margin-left: -2125px;
+  }
 }
 
 @media screen and (max-width: 768px) {

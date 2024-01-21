@@ -6,7 +6,7 @@
   transform: scaleX(-1);
 }
 
-.text-container {
+header .text-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,6 +52,7 @@
   height: 200px;
   object-fit: cover;
   border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid var(--lightGrey);
 }
 .featured-products .products .product-card .text-container {
   padding: 1rem;
@@ -80,7 +81,7 @@
 }
 
 .featured-products .products .product-description {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-family: "Open Sans";
   color: var(--grey);
   line-height: 1.5;
@@ -124,7 +125,8 @@
 
 @media screen and (max-width: 576px) {
   .container {
-    margin: 2rem auto;
+    margin: auto;
+    padding: 2rem 0;
   }
 
   .hero img {
