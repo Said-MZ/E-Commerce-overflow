@@ -14,7 +14,7 @@ featuredShoes.forEach((shoe) => {
         </div>
         <div class="text-container">
         <div class="details">
-        <h5 class="product-name">${shoe.name}</h5>
+        <h4 class="product-name">${shoe.name}</h4>
         <span class="product-price">$${shoe.price}</span>
         </div>
         <p class="product-description">

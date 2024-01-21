@@ -37,7 +37,7 @@
 
 .featured-products .products .product-card {
   flex: 1;
-  margin: 1rem;
+  margin: 1rem 0;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -83,10 +83,6 @@
   font-family: "Open Sans";
   color: var(--grey);
   line-height: 1.5;
-}
-
-.featured-products .btn {
-  align-self: end;
 }
 
 @media screen and (max-width: 992px) {
@@ -147,9 +143,15 @@
   .featured-products .products .product-card .text-container {
     justify-content: center;
     align-items: center;
+    text-align: left;
   }
 
   .featured-products .products .product-price {
     font-size: 0.75rem !important;
+  }
+
+  .featured-products .products .product-card .btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
   }
 }
