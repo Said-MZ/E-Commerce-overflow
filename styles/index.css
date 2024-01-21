@@ -76,6 +76,40 @@ small {
   font-size: 0.75rem; /* 12px */
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader > div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 6px solid var(--darkRed);
+  border-bottom: 0;
+  border-right: 0;
+  animation: loader 1s infinite linear;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
 header {
   background-image: url(../assets/heroBg.svg);
   background-size: cover;
