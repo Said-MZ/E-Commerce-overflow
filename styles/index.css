@@ -423,7 +423,7 @@ h1 span {
   }
 
   .box {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     font-size: 1rem;
     text-align: center;
   }
