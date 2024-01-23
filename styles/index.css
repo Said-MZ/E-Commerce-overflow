@@ -254,9 +254,11 @@ h1 span {
 }
 
 .box {
+  text-wrap: nowrap;
+  word-break: keep-all;
+  white-space: nowrap;
   display: inline-block;
   width: 100%;
-  text-wrap: nowrap;
   padding: 0 2rem;
   color: #fefefe;
   font-family: "Montserrat";
