@@ -1,3 +1,8 @@
+.hero {
+  color: var(--white);
+  padding-bottom: 1rem;
+}
+
 .hero img {
   width: clamp(400px, 35vw, 750px);
   margin: 0 auto;
