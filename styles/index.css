@@ -187,11 +187,13 @@ a {
   transition: color 0.3s ease-in-out;
 }
 
-a:hover {
+a:hover,
+button:hover {
   color: var(--lightGrey);
 }
 
-a::after {
+a::after,
+button::after {
   content: "";
   display: block;
   width: 100%;
@@ -202,7 +204,8 @@ a::after {
   transition: transform 0.3s;
 }
 
-a:hover::after {
+a:hover::after,
+button:hover::after {
   transform-origin: right;
   transform: scaleX(1);
 }
