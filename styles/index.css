@@ -116,6 +116,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   color: var(--light);
+  min-height: 80vh; /* unnecessary remove later */
 }
 
 nav {
@@ -278,6 +279,104 @@ h1 span {
   animation: bannerMove 50s linear infinite;
 }
 
+.wide-line {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  height: 2px;
+  background: var(--grey);
+  filter: brightness(0.75);
+}
+
+footer {
+  background-image: url(../assets/footerBg.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 5rem;
+  min-height: 60vh;
+}
+
+footer li {
+  margin: 0.75rem 0;
+  padding: 0%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  gap: 5rem;
+  padding: 2rem 2rem 0 2rem;
+  margin: auto;
+}
+
+.footer-content .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 3rem;
+  width: 100%;
+}
+
+.footer-content .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+}
+
+.footer-content .contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: space-between;
+  align-items: start;
+  gap: 3rem;
+  width: 100%;
+  margin: auto;
+}
+
+footer .links-group > a {
+  color: var(--white);
+  font-size: 1.777rem;
+}
+
+footer .links-group > a:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--darkRed);
+}
+
+.footer-content .footer-bottom {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background: var(--darkRed);
+  margin-bottom: 1.5rem;
+}
+
 @keyframes bannerMove {
   0% {
     margin-left: 0px;
@@ -285,6 +384,13 @@ h1 span {
   }
   100% {
     margin-left: -2125px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-content {
+    gap: 3rem;
+    padding: 1rem;
   }
 }
 
@@ -391,6 +497,18 @@ h1 span {
   .container {
     padding: 1rem;
     margin: 0 1rem;
+  }
+
+  .footer-content {
+    gap: 3rem;
+    padding: 1rem;
+  }
+
+  .footer-content .row {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 3rem;
   }
 }
 
