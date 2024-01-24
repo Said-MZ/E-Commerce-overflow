@@ -128,6 +128,7 @@ nav {
   margin: auto;
   height: 80px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: onLoad 500ms linear;
 }
 
 .logo {
@@ -298,6 +299,9 @@ footer {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-top: 5rem;
   min-height: 60vh;
+  animation: fromBottom linear, scroll linear;
+  animation-timeline: view();
+  animation-range: cover 0% cover 75%;
 }
 
 footer li {
@@ -391,6 +395,65 @@ footer .links-group > a:after {
   }
   100% {
     margin-left: -2125px;
+  }
+}
+
+/* scroll animation */
+
+@keyframes scroll {
+  0% {
+    opacity: 0.8;
+    filter: blur(2.5px);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  35% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  35% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  35% {
+    transform: translateY(0);
+  }
+}
+
+/* onload animation */
+
+@keyframes onLoad {
+  0% {
+    filter: blur(5px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
   }
 }
 
@@ -565,5 +628,9 @@ footer .links-group > a:after {
 
   .footer-content .footer-bottom p {
     font-size: 0.8rem;
+  }
+
+  .wide-line {
+    margin: 0 auto 5rem auto;
   }
 }

@@ -1,6 +1,7 @@
 .hero {
   color: var(--white);
   padding-bottom: 1rem;
+  animation: onLoad 500ms linear;
 }
 
 .hero img {
@@ -23,6 +24,8 @@
 }
 
 .featured-products h2 {
+  animation: fromLeft linear, scroll linear;
+  animation-timeline: view();
   margin-top: 3rem;
 }
 
@@ -42,6 +45,17 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   overflow: hidden;
+  animation: fromBottom linear, scroll linear;
+  animation-timeline: view();
+  animation-range: cover 0% cover 75%;
+}
+
+.featured-products .products .product-card:nth-child(2) {
+  animation-range: cover 0% cover 85%;
+}
+
+.featured-products .products .product-card:nth-child(3) {
+  animation-range: cover 0% cover 100%;
 }
 
 .featured-products .products .product-card:hover {
@@ -109,7 +123,15 @@
   align-items: center;
 }
 
+.newsletter h2 {
+  animation: fromLeft linear, scroll linear;
+  animation-timeline: view();
+}
+
 .newsletter p {
+  animation: fromRight linear, scroll linear;
+  animation-timeline: view();
+
   font-size: 1rem;
   font-family: "Open Sans";
   color: var(--lightGrey);
@@ -124,6 +146,9 @@
   align-items: center;
   gap: 0;
   width: clamp(300px, 50vw, 80vw);
+  animation: fromLeft linear, scroll linear;
+  animation-timeline: view();
+  animation-range: cover 0% cover 75%;
 }
 
 .newsletter form input {
@@ -179,6 +204,19 @@
 
   .featured-products .products {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .featured-products .products .product-card {
+    animation: fromRight linear, scroll linear;
+    animation-timeline: view();
+  }
+  .featured-products .products .product-card:nth-child(2) {
+    animation: fromLeft linear, scroll linear;
+    animation-timeline: view();
+    animation-range: cover 0% cover 75%;
+  }
+
+  .featured-products .products .product-card:nth-child(3) {
+    animation-range: cover 0% cover 75%;
   }
 }
 
