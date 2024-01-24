@@ -80,15 +80,11 @@ section img {
   }
 
   .about-us .container,
-  .our-mission .container {
+  .our-mission .container,
+  .our-vision .container {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-around;
-  }
-
-  .about-us-text,
-  .our-mission-text {
-    margin: 0;
   }
 
   h1 {
