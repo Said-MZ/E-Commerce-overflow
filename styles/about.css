@@ -1,0 +1,106 @@
+main {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.container {
+  margin: 1rem auto;
+  padding: 0rem 2rem;
+  align-items: start;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.about-us {
+  animation: fromLeft 1200ms, scroll 1200ms;
+}
+
+.our-mission {
+  animation: fromRight linear, scroll linear;
+  animation-timeline: view();
+}
+
+.our-vision {
+  animation: fromLeft linear, scroll linear;
+  animation-timeline: view();
+}
+
+.our-mission .container {
+  flex-direction: row-reverse;
+}
+.our-mission img {
+  flex-direction: row-reverse;
+  margin-right: 4rem;
+}
+
+.about-us {
+  margin-top: 5rem;
+}
+
+.about-us-text,
+.our-mission-text {
+  margin: 2.5rem 1rem;
+  width: 100%;
+}
+
+.about-us-text h1 {
+  margin-top: 1rem;
+}
+
+section p {
+  margin-top: 1.5rem;
+  color: var(--lightGrey);
+}
+
+section img {
+  width: clamp(250px, 50%, 450px);
+}
+
+.storyset {
+  font-size: small;
+  margin-top: 1rem;
+}
+
+.storyset::after {
+  width: 0;
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 768px) {
+  .about-us-text h1 {
+    margin-top: 0rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-us {
+    margin-top: 2rem;
+  }
+
+  .about-us .container,
+  .our-mission .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .about-us-text,
+  .our-mission-text {
+    margin: 0;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  .our-mission img {
+    flex-direction: row-reverse;
+    margin-right: 0;
+  }
+}

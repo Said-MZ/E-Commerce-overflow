@@ -17,6 +17,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 100%;
 } /*16px*/
 
@@ -116,7 +117,6 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   color: var(--light);
-  min-height: 80vh; /* unnecessary remove later */
 }
 
 nav {
@@ -283,11 +283,15 @@ h1 span {
 .wide-line {
   display: block;
   width: 95%;
+  margin: 0 auto 5rem auto;
   max-width: 1200px;
-  margin: 0 auto 10rem auto;
   height: 2px;
   background: var(--grey);
   filter: brightness(0.75);
+}
+
+.line-space {
+  margin: 0 auto 10rem auto;
 }
 
 footer {
