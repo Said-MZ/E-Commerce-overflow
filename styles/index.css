@@ -280,9 +280,10 @@ h1 span {
 }
 
 .wide-line {
-  width: 100%;
+  display: block;
+  width: 95%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto 10rem auto;
   height: 2px;
   background: var(--grey);
   filter: brightness(0.75);
@@ -560,5 +561,9 @@ footer .links-group > a:after {
   .box {
     font-size: 1rem;
     text-align: center;
+  }
+
+  .footer-content .footer-bottom p {
+    font-size: 0.8rem;
   }
 }
