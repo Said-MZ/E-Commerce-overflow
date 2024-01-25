@@ -4,6 +4,10 @@
   animation: onLoad 500ms linear;
 }
 
+h1 {
+  margin: 1.5rem auto;
+}
+
 .hero img {
   width: clamp(400px, 35vw, 750px);
   margin: 0 auto;
@@ -254,7 +258,7 @@
   }
 
   .featured-products .products .product-card .btn {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
 }
