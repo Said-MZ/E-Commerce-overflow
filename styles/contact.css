@@ -106,6 +106,7 @@ textarea:focus {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   transition: all 0.3s ease-in-out;
+  gap: 1rem;
 }
 
 .plus-icon {
@@ -126,14 +127,14 @@ textarea:focus {
 
 .plus-icon .line1 {
   transform: rotate(-45deg) translate(-3px, 3px);
-  width: 100%;
+  width: 30px;
   height: 5px;
   background-color: var(--white);
 }
 
 .plus-icon .line3 {
   transform: rotate(135deg);
-  width: 100%;
+  width: 30px;
   height: 5px;
   background-color: var(--white);
   transform: rotate(45deg) translate(0px, 0px);
@@ -192,5 +193,29 @@ textarea:focus {
 
   h1 {
     text-align: center;
+  }
+
+  .FAQ-content{
+    padding: 0.5rem;
+  }
+
+  .question-container , .FAQ-item-info{
+    padding: 0.5rem;
+  }
+
+  .plus-icon .line1 {
+    transform: rotate(-45deg) translate(0px, 0px);
+    width: 15px;
+    height: 2.5px;
+  }
+
+  .plus-icon .line3 {
+    width: 15px;
+    height: 2.5px;
+    transform: rotate(45deg) translate(-2px, -2px);
+  }
+
+  .rotate {
+    transform: rotate(0deg) translate(-5px,5px);
   }
 }
