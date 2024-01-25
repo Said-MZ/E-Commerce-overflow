@@ -6,9 +6,20 @@
     <title>Your E-commerce Website</title>
 
     <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/contact.css" />
   </head>
 
   <body>
+    <div class="alert alert-danger">
+      <h4>Wrong</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        voluptatum, quibusdam, quia, quae voluptate voluptatem quod dolorum
+        voluptatibus quos quas natus. Quisquam voluptatum, quibusdam, quia, quae
+        voluptate voluptatem quod dolorum voluptatibus quos quas natus.
+      </p>
+      <div class="time-line"></div>
+    </div>
     <div class="loader">
       <div class="inner"></div>
     </div>
@@ -40,6 +51,27 @@
           </ul>
         </div>
       </nav>
+
+      <section class="contact">
+        <div class="container">
+          <div class="form-container">
+            <h1>Get in Touch</h1>
+            <form method="post" class="contact-form">
+              <input type="text" placeholder="name" />
+              <input type="email" placeholder="email" />
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="message..."
+              ></textarea>
+              <input type="submit" value="Send" class="btn" id="form-submit" />
+            </form>
+          </div>
+          <img src="../assets/contact.svg" alt="Illustration" />
+        </div>
+      </section>
     </header>
     <main></main>
     <footer>
@@ -105,8 +137,12 @@
         <div class="footer-bottom">
           <p>&copy; ZorVex.com | Designed by Said-MZ</p>
         </div>
+        <a class="storyset" href="https://storyset.com/business"
+          >Illustrations by Storyset</a
+        >
       </div>
     </footer>
     <script src="../js/script.js"></script>
+    <script type="module" src="../js/contact.js"></script>
   </body>
 </html>

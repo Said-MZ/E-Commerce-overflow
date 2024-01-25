@@ -6,6 +6,7 @@
   --red: #ff0000;
   --darkRed: #a40000;
   --lightGrey: #bfbfbf;
+  --darkGreen: #00a400;
 }
 
 *,
@@ -283,7 +284,7 @@ h1 span {
 .wide-line {
   display: block;
   width: 95%;
-  margin: 0 auto 5rem auto;
+  margin: auto;
   max-width: 1200px;
   height: 2px;
   background: var(--grey);
@@ -390,6 +391,84 @@ footer .links-group > a:after {
   height: 4px;
   background: var(--darkRed);
   margin-bottom: 1.5rem;
+}
+
+.storyset {
+  font-size: small;
+  margin-top: 1rem;
+}
+
+.storyset::after {
+  width: 0;
+}
+
+.alert {
+  text-align: center;
+  margin: 1rem;
+  border-radius: 0.25rem;
+  width: clamp(350px, 50%, 450px);
+  font-size: 1rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  z-index: 9999;
+  animation: fromRight 300ms ease-out, scroll 300ms ease-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  top: 0%;
+  left: 50%;
+  transform: translateX(calc(-50% - 1rem));
+  display: none;
+  overflow: hidden;
+  text-wrap: nowrap;
+  word-break: keep-all;
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+}
+
+.alert-danger {
+  background-color: #a4000099;
+  color: var(--white);
+}
+
+.alert h4 {
+  font-size: 1.5rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+  margin: 1rem;
+}
+
+.alert p {
+  font-size: 0.75rem;
+  font-family: "open sans";
+  margin: 0 1rem 0.5rem 1rem;
+}
+
+.alert-success {
+  background-color: #00a40099;
+  color: var(--white);
+}
+
+.time-line {
+  width: 100%;
+  height: 4px;
+  background: var(--white);
+  margin-top: 1rem;
+}
+
+.time-line-animate {
+  transition: all 0.3s ease-in-out;
+  animation: shrinkTimeline 3s linear;
+}
+
+@keyframes shrinkTimeline {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
 }
 
 @keyframes bannerMove {
@@ -632,9 +711,5 @@ footer .links-group > a:after {
 
   .footer-content .footer-bottom p {
     font-size: 0.8rem;
-  }
-
-  .wide-line {
-    margin: 0 auto 5rem auto;
   }
 }

@@ -56,18 +56,6 @@ section img {
   width: clamp(250px, 50%, 450px);
 }
 
-.storyset {
-  font-size: small;
-  margin-top: 1rem;
-}
-
-.storyset::after {
-  width: 0;
-}
-
-@media screen and (max-width: 1200px) {
-}
-
 @media screen and (max-width: 768px) {
   .about-us-text h1 {
     margin-top: 0rem;
@@ -96,7 +84,6 @@ section img {
   }
 
   .our-mission img {
-    flex-direction: row-reverse;
     margin-right: 0;
   }
 }

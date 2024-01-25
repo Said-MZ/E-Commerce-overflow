@@ -1,4 +1,4 @@
-import shoes from "./data.js";
+import shoes from "./productsData.js";
 
 const products = document.querySelector(".products");
 const featuredShoes = shoes
