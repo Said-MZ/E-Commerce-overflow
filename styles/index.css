@@ -412,12 +412,12 @@ footer .links-group > a:after {
   transition: all 0.3s ease-in-out;
   position: fixed;
   z-index: 9999;
-  animation: fromRight 300ms ease-out, scroll 300ms ease-out;
+  animation: fromTop 300ms ease-out;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  top: 0%;
+  top: -100%;
   left: 50%;
   transform: translateX(calc(-50% - 1rem));
-  display: none;
+  display: block;
   overflow: hidden;
   text-wrap: nowrap;
   word-break: keep-all;
@@ -526,6 +526,14 @@ footer .links-group > a:after {
   }
 }
 
+@keyframes fromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(0);
+  }
+}
 /* onload animation */
 
 @keyframes onLoad {

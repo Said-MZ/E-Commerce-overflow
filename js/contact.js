@@ -38,6 +38,7 @@ function displayAlert(header, text, action) {
   alert.style.display = "block";
   alert.style.width = "clamp(350px, 50%, 450px)";
   alert.style.opacity = "1";
+  alert.style.top = "0%";
 
   alert.classList.add(`alert-${action}`);
   alertH4.innerHTML = header;
@@ -51,5 +52,6 @@ function displayAlert(header, text, action) {
     alert.classList.remove(`alert-${action}`);
     timeLine.classList.remove(`time-line-animate`);
     timeLine.style.opacity = "0";
+    alert.style.top = "-100%";
   }, 3000);
 }
