@@ -18,9 +18,11 @@
 }
 
 html {
+  scrollbar-color: var(--grey) var(--dark);
+  scrollbar-width: thin;
   scroll-behavior: smooth;
-  font-size: 100%;
-} /*16px*/
+  font-size: 100%; /*16px*/
+}
 
 body {
   background-color: var(--dark);
@@ -39,10 +41,6 @@ h4,
 h5 {
   font-family: "Montserrat";
   font-weight: 700;
-}
-
-html {
-  font-size: 100%; /* 16px */
 }
 
 ul {
@@ -425,6 +423,7 @@ footer .links-group > a:after {
   word-break: keep-all;
   white-space: nowrap;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .alert-danger {
@@ -711,5 +710,9 @@ footer .links-group > a:after {
 
   .footer-content .footer-bottom p {
     font-size: 0.8rem;
+  }
+
+  .alert {
+    width: 90vw !important;
   }
 }

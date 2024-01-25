@@ -86,7 +86,7 @@ textarea:focus {
 
 @media screen and (max-width: 576px) {
   .contact {
-    margin-top: 2rem;
+    margin-top: 6rem;
   }
 
   .contact .container {
