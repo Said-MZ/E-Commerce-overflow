@@ -74,6 +74,7 @@ textarea:focus {
 .FAQ .container h2 {
   animation: fromBottom linear, scroll linear;
   animation-timeline: view();
+  margin: 1rem auto;
   width: 100%;
   text-align: center;
 }
@@ -91,6 +92,9 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  cursor: pointer;
+  outline: 0px solid var(--darkRed);
+  transition: all 0.3s ease-in-out;
 }
 
 .question-container {
@@ -195,11 +199,12 @@ textarea:focus {
     text-align: center;
   }
 
-  .FAQ-content{
+  .FAQ-content {
     padding: 0.5rem;
   }
 
-  .question-container , .FAQ-item-info{
+  .question-container,
+  .FAQ-item-info {
     padding: 0.5rem;
   }
 
@@ -216,6 +221,6 @@ textarea:focus {
   }
 
   .rotate {
-    transform: rotate(0deg) translate(-5px,5px);
+    transform: rotate(0deg) translate(-5px, 5px);
   }
 }
