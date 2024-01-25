@@ -39,7 +39,6 @@ const faq = [
   {
     id: 8,
     title: "How do I change my billing address?",
-
     info: "To change your billing address, you can go to the change billing address page and enter your order number and email address. Then you can click the change billing address button and it will change your billing address.",
   },
 ];

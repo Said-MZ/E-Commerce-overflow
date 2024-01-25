@@ -1,4 +1,4 @@
-// import faq from "./faqData";
+import faq from "./faqData.js";
 
 // handle form
 
@@ -55,3 +55,44 @@ function displayAlert(header, text, action) {
     alert.style.top = "-100%";
   }, 3000);
 }
+
+// FAQ
+const FAQContainer = document.querySelector(".FAQ .container");
+
+faq.map(({ title, info }, i) => {
+  return (FAQContainer.innerHTML += `
+      <div class="FAQ-content">
+        <div class="FAQ-item">
+          <div class="question-container">
+            <h4>${i + 1}.  ${title}</h4>
+            <div class="plus-icon">
+              <div class="line1"></div>
+              <div class="line3"></div>
+            </div>
+          </div>
+          <p class="FAQ-item-info">${info}</p>
+        </div>
+      </div>
+    `);
+});
+
+const FAQItem = document.querySelectorAll(".FAQ-item");
+
+FAQItem.forEach((item) => {
+  const handleClick = (plusIcon, FAQItemInfo) => {
+    if (plusIcon === undefined || FAQItemInfo === undefined) {
+      return;
+    }
+    plusIcon.classList.toggle("rotate");
+    FAQItemInfo.classList.toggle("show");
+  };
+
+  item.addEventListener("click", (e) => {
+    const target = e.currentTarget;
+    const questionContainer = target.querySelector(".question-container");
+    const plusIcon = target.querySelector(".plus-icon");
+    const FAQItemInfo = target.querySelector(".FAQ-item-info");
+    handleClick(plusIcon, FAQItemInfo);
+    questionContainer.addEventListener("click", handleClick);
+  });
+});
