@@ -34,7 +34,7 @@ latestBlogs.forEach((blog, i) => {
             ${blog.description}
             </p>
             <div class="blog-btn">
-            <a class="btn" href="./pages/blog.html">Read more</a>
+            <a class="btn" href="./singleBlog.html?id=${blog.id}">Read more</a>
             </div>
             </div>
     
@@ -61,7 +61,7 @@ trendingBlogs.forEach((blog, i) => {
             ${blog.description}
             </p>
             <div class="blog-btn">
-            <a class="btn" href="./pages/blog.html">Read more</a>
+            <a class="btn" href="./singleBlog.html?id=${blog.id}">Read more</a>
             </div>
             </div>
     
@@ -88,7 +88,7 @@ blogGuides.forEach((blog) => {
             ${blog.description}
             </p>
             <div class="blog-btn">
-            <a class="btn" href="./pages/blog.html">Read more</a>
+            <a class="btn" href="./singleBlog.html?id=${blog.id}">Read more</a>
             </div>
             </div>
     
@@ -115,7 +115,7 @@ blogData.forEach((blog) => {
             ${blog.description}
             </p>
             <div class="blog-btn">
-            <a class="btn" href="./pages/blog.html">Read more</a>
+            <a class="btn" href="./singleBlog.html?id=${blog.id}">Read more</a>
             </div>
             </div>
     

@@ -143,6 +143,11 @@ small {
 .all-blogs .card {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.featured-products .card p,
+.trending .card p,
+.all-blogs .card p {
+  color: var(--grey);
+}
 
 .card img {
   width: 100%;
