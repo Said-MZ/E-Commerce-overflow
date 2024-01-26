@@ -95,3 +95,30 @@ blogGuides.forEach((blog) => {
         `;
   blogGuidesContainer.appendChild(div);
 });
+
+// all blogs html
+
+const allBlogsContainer = document.querySelector(".all-blogs-container");
+
+blogData.forEach((blog) => {
+  const div = document.createElement("div");
+  div.classList.add("card");
+  div.innerHTML = `
+            <div class="blog-img">
+            <img src="${blog.img}" alt="${blog.title}" />
+            </div>
+            <div class="text-container">
+            <div class="details">
+            <h5 class="blog-title">${blog.title}</h5>
+            </div>
+            <p class="blog-description">
+            ${blog.description}
+            </p>
+            <div class="blog-btn">
+            <a class="btn" href="./pages/blog.html">Read more</a>
+            </div>
+            </div>
+    
+        `;
+  allBlogsContainer.appendChild(div);
+});

@@ -77,7 +77,8 @@ small {
 }
 
 .featured-products,
-.trending {
+.trending,
+.all-blogs {
   background-color: var(--white);
   color: var(--dark);
 }
@@ -97,7 +98,8 @@ small {
 }
 .guides-container,
 .trending-container,
-.latest-container {
+.latest-container,
+.all-blogs-container {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -133,7 +135,8 @@ small {
 }
 
 .featured-products .card,
-.trending .card {
+.trending .card,
+.all-blogs .card {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
