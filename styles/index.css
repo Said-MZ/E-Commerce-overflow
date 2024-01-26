@@ -134,6 +134,10 @@ small {
   box-shadow: 0 0 10px rgb(20, 20, 20);
 }
 
+.card p {
+  color: var(--lightGrey);
+}
+
 .featured-products .card,
 .trending .card,
 .all-blogs .card {
@@ -852,6 +856,10 @@ footer .links-group > a:after {
   .all-blogs-container {
     display: flex;
     flex-direction: column;
+  }
+
+  .card p{
+    font-size: 0.7rem;
   }
 
   .card .btn {
