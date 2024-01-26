@@ -807,7 +807,7 @@ footer .links-group > a:after {
   }
   .container {
     padding: 1rem;
-    margin: 0 1rem;
+    margin: 0;
   }
 
   .banner {
@@ -845,7 +845,12 @@ footer .links-group > a:after {
     margin-left: 0.1rem;
   }
 
-  .products {
+  .products,
+  .guides-container,
+  .trending-container,
+  .latest-container,
+  .all-blogs-container {
+    display: flex;
     flex-direction: column;
   }
 

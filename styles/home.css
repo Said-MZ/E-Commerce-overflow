@@ -123,13 +123,6 @@ input:active {
 }
 
 @media screen and (max-width: 576px) {
-  .container {
-    .container {
-      padding: 1rem;
-      margin: 0 1rem;
-    }
-  }
-
   .hero img {
     width: clamp(200px, 50vw, 80vw);
   }
