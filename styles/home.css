@@ -16,89 +16,7 @@ h1 {
   transform: scaleX(-1);
 }
 
-.featured-products {
-  background-color: var(--white);
-  color: var(--dark);
-}
-
-.featured-products .container {
-  flex-direction: column;
-  gap: 3rem;
-  align-items: start;
-}
-
-.featured-products h2 {
-  animation: fromLeft linear, scroll linear;
-  animation-timeline: view();
-  margin-top: 3rem;
-}
-
-.featured-products .products {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.featured-products .products .product-card {
-  flex: 1;
-  margin: 1rem 0;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
-  animation: fromBottom linear, scroll linear;
-  animation-timeline: view();
-  animation-range: cover 0% cover 75%;
-}
-
-.featured-products .products .product-card:nth-child(2) {
-  animation-range: cover 0% cover 85%;
-}
-
-.featured-products .products .product-card:nth-child(3) {
-  animation-range: cover 0% cover 100%;
-}
-
-.featured-products .products .product-card:hover {
-  transform: scale(1.01);
-}
-.featured-products .products .product-card:hover img {
-  transform: translateY(10px);
-  transform: scale(1.1);
-}
-
-.featured-products .products .product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px 5px 0 0;
-  border-bottom: 1px solid var(--lightGrey);
-  transition: all 0.3s ease-in-out;
-}
-
-.featured-products .products .product-card .text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  gap: 1rem;
-  height: 100%;
-  padding: 1rem;
-}
-
-.featured-products .products .details {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: start;
-  gap: 0.5rem;
-}
-
-.featured-products .products .details .product-price {
+.product-price {
   font-weight: 700;
   font-size: 1.333rem;
   font-family: "Montserrat";
@@ -107,7 +25,7 @@ h1 {
   margin-top: 0.3rem;
 }
 
-.featured-products .products .product-description {
+.product-description {
   font-size: 1rem;
   font-family: "Open Sans";
   color: var(--grey);
@@ -142,7 +60,7 @@ h1 {
   line-height: 1.5;
 }
 
-.newsletter form {
+form {
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
@@ -155,7 +73,7 @@ h1 {
   animation-range: cover 0% cover 75%;
 }
 
-.newsletter form input {
+input {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px 0 0 5px;
@@ -165,8 +83,8 @@ h1 {
   width: 100%;
 }
 
-.newsletter form input:focus,
-.newsletter form input:active {
+input:focus,
+input:active {
   outline: 2px solid var(--darkRed);
 }
 
@@ -181,9 +99,6 @@ h1 {
   .container {
     flex-direction: column-reverse;
     gap: 0rem;
-  }
-  .container img {
-    width: clamp(300px, 50vw, 80vw);
   }
 
   .hero .text-container {
@@ -205,23 +120,6 @@ h1 {
     text-align: center;
     gap: 1rem;
   }
-
-  .featured-products .products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .featured-products .products .product-card {
-    animation: fromRight linear, scroll linear;
-    animation-timeline: view();
-  }
-  .featured-products .products .product-card:nth-child(2) {
-    animation: fromLeft linear, scroll linear;
-    animation-timeline: view();
-    animation-range: cover 0% cover 75%;
-  }
-
-  .featured-products .products .product-card:nth-child(3) {
-    animation-range: cover 0% cover 75%;
-  }
 }
 
 @media screen and (max-width: 576px) {
@@ -236,29 +134,17 @@ h1 {
     width: clamp(200px, 50vw, 80vw);
   }
 
-  .text-container {
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
+  .featured-products .products .card {
+    animation: fromRight linear, scroll linear;
+    animation-timeline: view();
+  }
+  .featured-products .products .card:nth-child(2) {
+    animation: fromLeft linear, scroll linear;
+    animation-timeline: view();
+    animation-range: cover 0% cover 75%;
   }
 
-  .featured-products .products {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .featured-products .products .product-card .text-container {
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-  }
-
-  .featured-products .products .details .product-price {
-    font-size: 1rem;
-    margin-left: 0.1rem;
-  }
-
-  .featured-products .products .product-card .btn {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
+  .featured-products .products .card:nth-child(3) {
+    animation-range: cover 0% cover 75%;
   }
 }

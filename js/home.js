@@ -7,7 +7,7 @@ const featuredShoes = shoes
 
 featuredShoes.forEach((shoe) => {
   const div = document.createElement("div");
-  div.classList.add("product-card");
+  div.classList.add("card");
   div.innerHTML = `
         <div class="product-img">
         <img src="${shoe.image}" alt="${shoe.name}" />
@@ -24,7 +24,6 @@ featuredShoes.forEach((shoe) => {
         <a class="btn"  href="./pages/shop.html">Learn more</a>
         </div>
         </div>
-
     `;
   products.appendChild(div);
 });
