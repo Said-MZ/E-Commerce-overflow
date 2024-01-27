@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your E-commerce Website</title>
 
-    <link rel="stylesheet" href="../styles/shop.css" />
     <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/shop.css" />
   </head>
 
   <body>
@@ -62,17 +62,21 @@
               </svg>
             </i>
             <input
+              class="search-input"
               type="search"
               name="search"
               id="search"
               placeholder="Search..."
             />
-            <button class="btn" id="search-btn">Search</button>
           </form>
         </div>
       </section>
     </header>
-    <main></main>
+    <main>
+      <section class="products">
+        <div class="container"></div>
+      </section>
+    </main>
     <footer>
       <div class="footer-content">
         <div class="row">
@@ -139,5 +143,6 @@
       </div>
     </footer>
     <script src="../js/script.js"></script>
+    <script type="module" src="../js/shop.js"></script>
   </body>
 </html>
