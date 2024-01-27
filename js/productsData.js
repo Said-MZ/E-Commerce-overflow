@@ -1,3 +1,5 @@
+//TODO: Add more products to the array
+
 const shoes = [
   {
     id: 1,

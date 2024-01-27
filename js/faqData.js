@@ -1,5 +1,3 @@
-// faq data, zorvex online ecommerce store for shoes
-
 const faq = [
   {
     id: 1,

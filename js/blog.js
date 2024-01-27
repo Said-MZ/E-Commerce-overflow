@@ -14,8 +14,6 @@ const blogGuides = blogData.filter((blog) => {
   return blog.type === "guide";
 });
 
-// #########################
-
 // latest blogs html
 
 const latestBlogsContainer = document.querySelector(".latest-container");
@@ -118,7 +116,6 @@ blogData.forEach((blog) => {
             <a class="btn" href="./singleBlog.html?id=${blog.id}">Read more</a>
             </div>
             </div>
-    
         `;
   allBlogsContainer.appendChild(div);
 });

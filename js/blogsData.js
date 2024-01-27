@@ -1,3 +1,6 @@
+// TODO: change the datePosted to a date object
+// also add real text for the blog instead of this bs, and add text formatting and handle it in singleBlog.js file
+
 const blogData = [
   {
     id: 1,
