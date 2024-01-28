@@ -31,7 +31,6 @@ shoes.forEach((shoe) => {
 
 const searchForm = document.querySelector(".search-form");
 const searchInput = document.querySelector(".search-input");
-const searchBtn = document.querySelector("#search-btn");
 
 const filteredShoes = [];
 
@@ -61,12 +60,26 @@ searchInput.addEventListener("keyup", (e) => {
       productsContainer.appendChild(div);
     });
   }
+
   filteredShoes.length = 0;
   shoes.forEach((shoe) => {
     if (shoe.name.toLowerCase().includes(searchValue)) {
       filteredShoes.push(shoe);
     }
   });
+
+  if (filteredShoes.length === 0) {
+    productsContainer.innerHTML = "";
+    const div = document.createElement("div");
+    div.innerHTML = `
+        <h2>
+          No results found...
+        </h2>
+    `;
+    productsContainer.appendChild(div);
+    return;
+  }
+
   productsContainer.innerHTML = "";
   filteredShoes.forEach((shoe) => {
     const div = document.createElement("div");
