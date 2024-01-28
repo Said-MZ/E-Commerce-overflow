@@ -122,3 +122,35 @@ p {
   color: whitesmoke;
   cursor: not-allowed;
 }
+
+/* responsiveness */
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  img {
+    margin: auto;
+    margin-top: 5rem;
+    height: 35vh !important;
+    width: 95%;
+  }
+  .unavailable-text {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--red);
+    margin: 1rem 0;
+  }
+  .btn-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .btn {
+    width: 100%;
+  }
+  .btn:nth-child(2) {
+    margin-top: 1rem;
+  }
+}

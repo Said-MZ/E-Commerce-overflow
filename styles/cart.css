@@ -2,10 +2,6 @@ header {
   min-height: 25rem;
 }
 
-nav .logo-dark {
-  color: var(--white);
-}
-
 h1 {
   padding-top: 5rem;
   text-align: center;
@@ -171,5 +167,6 @@ form .card-holder {
       "cvv"
       " holder"
       "submit";
+    padding: 0 1rem;
   }
 }
