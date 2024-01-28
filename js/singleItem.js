@@ -6,31 +6,14 @@ const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get("id");
 
 // get the blog with the id
-const item = shoes.find((blog) => blog.id === parseInt(id));
-console.log(item);
-// update the html with the blog details
-//   <section class="item">
-//     <div class="container">
-//       <div class="item-img">
-//         <img src="" alt="" />
-//       </div>
-//       <div class="item-text">
-//         <h2 class="name"></h2>
-//         <p class="description"></p>
-//         <p class="price"></p>
-//         <p class="color"></p>
-//         <p class="quantity"></p>
-//         <p class="size"></p>
-//         <a href="./shop.html" class="btn">
-//           Explore other products
-//         </a>
-//       </div>
-//     </div>
-//   </section>;
+const shoesFromLocalStorage = JSON.parse(localStorage.getItem("shoes"));
 
-// get items
+let shoesData = shoesFromLocalStorage || shoes;
+const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart"));
 
-const itemImg = document.querySelector(".item-img img");
+const item = shoesData.find((shoe) => shoe.id === parseInt(id));
+
+const itemImg = document.querySelector("header img");
 const itemName = document.querySelector(".item-text .name");
 const itemDescription = document.querySelector(".item-text .description");
 const itemPrice = document.querySelector(".item-text .price");
@@ -39,12 +22,49 @@ const itemQuantity = document.querySelector(".item-text .quantity");
 const itemSize = document.querySelector(".item-text .size");
 
 itemImg.alt = item.name;
-itemImg.style = "width: 100%;";
 
 itemImg.src = item.image;
 itemName.textContent = item.name;
 itemDescription.textContent = item.description;
-itemPrice.textContent = item.price;
-itemColor.textContent = item.color;
-itemQuantity.textContent = item.quantity;
-itemSize.textContent = item.size;
+itemPrice.textContent = "Price: $" + item.price;
+itemColor.textContent = "Color: " + item.color;
+itemQuantity.textContent = "Stock: " + item.quantity;
+itemSize.textContent = "Size :" + item.size;
+
+if (item.quantity === 0 || !item.isAvailable) {
+  itemImg.classList.add("unavailable");
+}
+
+// cart
+
+const addToCartBtn = document.querySelector(".add-to-cart-btn");
+if (item.quantity === 0 || !item.isAvailable) {
+  addToCartBtn.disabled = true;
+  addToCartBtn.textContent = "Out of stock";
+  addToCartBtn.classList.add("disabled");
+}
+const cartCount = document.querySelector(".cart-count");
+cartCount.textContent = cartFromLocalStorage?.length || 0;
+let cart = cartFromLocalStorage || [];
+
+addToCartBtn.addEventListener("click", () => {
+  cart.push(item);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  cartCount.textContent = cart.length;
+  addToCartBtn.disabled = true;
+  addToCartBtn.textContent = "Added to cart";
+  addToCartBtn.classList.add("disabled");
+
+  item.quantity--;
+  itemQuantity.textContent = "Stock: " + item.quantity;
+  if (item.quantity === 0 || !item.isAvailable) {
+    itemImg.classList.add("unavailable");
+  }
+  localStorage.setItem("shoes", JSON.stringify(shoesData));
+
+  setTimeout(() => {
+    addToCartBtn.disabled = false;
+    addToCartBtn.textContent = "Add to cart";
+    addToCartBtn.classList.remove("disabled");
+  }, 2000);
+});

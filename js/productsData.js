@@ -1,6 +1,6 @@
 //TODO: Add more products to the array
 
-const shoes = [
+let shoes = [
   {
     id: 1,
     isAvailable: true,
