@@ -1,0 +1,171 @@
+header {
+  min-height: 25rem;
+}
+
+nav .logo-dark {
+  color: var(--white);
+}
+
+h1 {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+img {
+  height: 10rem;
+  width: 15rem;
+  object-fit: cover;
+}
+
+main .container {
+  display: block;
+}
+
+.cart {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.014);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.cart .btn {
+  display: block;
+  margin-right: 2rem;
+}
+
+form {
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-areas:
+    "name email"
+    "address city"
+    "country zip"
+    "card card"
+    "submit submit";
+  grid-gap: 1rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+form input {
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--lightGrey);
+  outline: none;
+}
+
+form input:focus {
+  border: 1px solid var(--darkRed);
+}
+
+form input[type="submit"] {
+  grid-area: submit;
+  background-color: var(--darkRed);
+  color: var(--white);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  filter: brightness(0.8);
+}
+
+form input[type="text"] {
+  width: 100%;
+}
+
+form input[type="email"] {
+  grid-area: email;
+}
+
+form input[type="text"]:nth-child(1) {
+  grid-area: name;
+}
+
+form input[type="text"]:nth-child(2) {
+  grid-area: address;
+}
+
+form input[type="text"]:nth-child(3) {
+  grid-area: city;
+}
+
+form input[type="text"]:nth-child(4) {
+  grid-area: country;
+}
+
+form input[type="text"]:nth-child(5) {
+  grid-area: zip;
+}
+
+form input[type="text"]:nth-child(6) {
+  grid-area: card;
+}
+
+form input[type="text"]:nth-child(7) {
+  grid-area: card;
+}
+
+form input[type="text"]:nth-child(8) {
+  grid-area: card;
+}
+
+form input[type="text"]:nth-child(9) {
+  grid-area: card;
+}
+
+/* responsiveness */
+
+@media screen and (max-width: 768px) {
+  main .container {
+    margin: 0;
+  }
+
+  .cart {
+    gap: .5rem;
+  }
+  .cart-img {
+    height: clamp(100px, 10vw, 200px);
+    width: clamp(100px, 10vw, 200px);
+  }
+  .cart img {
+    height: clamp(100px, 10vw, 200px);
+    width: clamp(100px, 10vw, 200px);
+  }
+  .cart h4 {
+    font-size: 1rem;
+  }
+
+  .cart .btn {
+    margin-right: 1rem;
+  }
+
+  .cart .remove {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  form {
+    grid-template-areas:
+      "name"
+      "email"
+      "address"
+      "city"
+      "country"
+      "zip"
+      "card"
+      "submit";
+  }
+}

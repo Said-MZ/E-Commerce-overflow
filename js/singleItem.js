@@ -13,16 +13,15 @@ const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart"));
 
 const item = shoesData.find((shoe) => shoe.id === parseInt(id));
 
-const itemImg = document.querySelector("header img");
-const itemName = document.querySelector(".item-text .name");
-const itemDescription = document.querySelector(".item-text .description");
-const itemPrice = document.querySelector(".item-text .price");
-const itemColor = document.querySelector(".item-text .color");
-const itemQuantity = document.querySelector(".item-text .quantity");
-const itemSize = document.querySelector(".item-text .size");
+const itemImg = document.querySelector("header > img");
+const itemName = document.querySelector(".item .name");
+const itemDescription = document.querySelector(".item .description");
+const itemPrice = document.querySelector(".item .price");
+const itemColor = document.querySelector(".item .color");
+const itemQuantity = document.querySelector(".item .quantity");
+const itemSize = document.querySelector(".item .size");
 
 itemImg.alt = item.name;
-
 itemImg.src = item.image;
 itemName.textContent = item.name;
 itemDescription.textContent = item.description;
