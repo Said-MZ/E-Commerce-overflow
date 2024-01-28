@@ -70,13 +70,11 @@ searchInput.addEventListener("keyup", (e) => {
 
   if (filteredShoes.length === 0) {
     productsContainer.innerHTML = "";
-    const div = document.createElement("div");
-    div.innerHTML = `
-        <h2>
+    const h2 = document.createElement("h2");
+    h2.innerHTML = `
           No results found...
-        </h2>
     `;
-    productsContainer.appendChild(div);
+    productsContainer.appendChild(h2);
     return;
   }
 
