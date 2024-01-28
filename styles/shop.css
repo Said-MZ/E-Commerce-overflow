@@ -60,6 +60,7 @@ nav {
   font-size: 1rem;
   font-weight: 500;
   color: var(--dark);
+  padding-right: 1rem;
 }
 
 .search-form input::placeholder {
