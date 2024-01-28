@@ -48,7 +48,8 @@ form {
     "name email"
     "address city"
     "country zip"
-    "card card"
+    "card expiry-date"
+    "cvv holder"
     "submit submit";
   grid-gap: 1rem;
 }
@@ -113,16 +114,16 @@ form input[type="text"]:nth-child(6) {
   grid-area: card;
 }
 
-form input[type="text"]:nth-child(7) {
-  grid-area: card;
+form .expiry-date {
+  grid-area: expiry-date;
 }
 
-form input[type="text"]:nth-child(8) {
-  grid-area: card;
+form .cvv {
+  grid-area: cvv;
 }
 
-form input[type="text"]:nth-child(9) {
-  grid-area: card;
+form .card-holder {
+  grid-area: holder;
 }
 
 /* responsiveness */
@@ -133,7 +134,7 @@ form input[type="text"]:nth-child(9) {
   }
 
   .cart {
-    gap: .5rem;
+    gap: 0.5rem;
   }
   .cart-img {
     height: clamp(100px, 10vw, 200px);
@@ -162,10 +163,13 @@ form input[type="text"]:nth-child(9) {
       "name"
       "email"
       "address"
-      "city"
       "country"
+      "city "
       "zip"
       "card"
+      "expiry-date"
+      "cvv"
+      " holder"
       "submit";
   }
 }
