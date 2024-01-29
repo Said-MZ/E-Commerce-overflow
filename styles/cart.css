@@ -1,7 +1,3 @@
-header {
-  min-height: 25rem;
-}
-
 .logo-dark {
   color: var(--white) !important;
 }
@@ -34,9 +30,16 @@ main .container {
   overflow: hidden;
 }
 
-.cart .btn {
+.cart button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--red);
+  font-size: 1.5rem;
   display: block;
   margin-right: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 form {
@@ -107,7 +110,7 @@ form input[type="submit"] {
   cursor: pointer;
 }
 
-h2 {
+.container h2 {
   margin-top: 5rem;
 }
 
@@ -148,6 +151,7 @@ form input[type="text"]:nth-child(6) {
 }
 
 form .expiry-date {
+  width: 100%;
   grid-area: expiry-date;
 }
 
@@ -205,5 +209,21 @@ form .card-holder {
       " holder"
       "submit";
     padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cart {
+    gap: 0.5rem;
+  }
+  .cart h4 {
+    font-size: 0.8em;
+  }
+  .cart span {
+    font-size: 0.6rem;
+  }
+  .cart button {
+    margin-right: 0.5rem !important;
+    font-size: 0.75rem !important;
   }
 }

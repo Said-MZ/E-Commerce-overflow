@@ -42,7 +42,7 @@ cartFromLocalStorage.forEach((item) => {
     </div>
     <div class="cart-total">
     </div>
-    <button class="btn remove"  href="./pages/shop.html">Remove</button>
+    <button class=" remove"  href="./pages/shop.html">Remove</button>
     </div>
     `;
 });
