@@ -18,7 +18,7 @@ shoes.forEach((shoe) => {
         ${shoe.description}
         </p>
         <div class="product-btn">
-        <a class="btn"  href="./singleItem.html?id=${shoe.id}">Learn more</a>
+        <a class="btn" href="./singleItem.html?id=${shoe.id}">Learn more</a>
         </div>
         </div>
     `;
@@ -53,7 +53,7 @@ searchInput.addEventListener("keyup", (e) => {
         ${shoe.description}
         </p>
         <div class="product-btn">
-        <a class="btn"  href="./pages/shop.html">Learn more</a>
+        <a class="btn" href="./singleItem.html?id=${shoe.id}">Learn more</a>
         </div>
         </div>
     `;
@@ -95,7 +95,7 @@ searchInput.addEventListener("keyup", (e) => {
         ${shoe.description}
         </p>
         <div class="product-btn">
-        <a class="btn"  href="./pages/shop.html">Learn more</a>
+        <a class="btn" href="./singleItem.html?id=${shoe.id}">Learn more</a>
         </div>
         </div>
     `;

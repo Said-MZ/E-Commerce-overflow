@@ -99,16 +99,16 @@ const form = document.querySelector(".checkout-form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const name = document.querySelector("input[type=text]");
-  const email = document.querySelector("input[type=email]");
-  const address = document.querySelector(".address");
-  const city = document.querySelector(".city");
-  const country = document.querySelector(".country");
-  const zip = document.querySelector(".zip");
-  const cardNumber = document.querySelector(".card-number");
-  const cardHolder = document.querySelector(".card-holder");
-  const expiryDate = document.querySelector(".expiry-date");
-  const cvv = document.querySelector(".cvv");
+  const name = document.querySelector(".checkout-form input[type=text]");
+  const email = document.querySelector(".checkout-form input[type=email]");
+  const address = document.querySelector(".checkout-form .address");
+  const city = document.querySelector(".checkout-form .city");
+  const country = document.querySelector(".checkout-form .country");
+  const zip = document.querySelector(".checkout-form .zip");
+  const cardNumber = document.querySelector(".checkout-form .card-number");
+  const cardHolder = document.querySelector(".checkout-form .card-holder");
+  const expiryDate = document.querySelector(".checkout-form .expiry-date");
+  const cvv = document.querySelector(".checkout-form .cvv");
   const nameValue = name.value;
   const emailValue = email.value;
   const addressValue = address.value;
@@ -119,7 +119,8 @@ form.addEventListener("submit", (e) => {
   const cardHolderValue = cardHolder.value;
   const expiryDateValue = expiryDate.value;
   const cvvValue = cvv.value;
-  const isEmpty =
+
+  if (
     nameValue === "" ||
     emailValue === "" ||
     addressValue === "" ||
@@ -129,8 +130,8 @@ form.addEventListener("submit", (e) => {
     cardNumberValue === "" ||
     cardHolderValue === "" ||
     expiryDateValue === "" ||
-    cvvValue === "";
-  if (!isEmpty) {
+    cvvValue === ""
+  ) {
     displayAlert(" Error", "Please fill out all fields", "danger");
   } else {
     displayAlert("Success", "Message sent successfully", "success");
