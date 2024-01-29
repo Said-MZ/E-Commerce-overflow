@@ -63,12 +63,6 @@ removeBtns.forEach((btn, index) => {
 
 // coupon and total price
 
-// <h2>Your total is: <span class="total"></span></h2>
-// <form class="coupon">
-//   <input type="text" placeholder="Coupon Code" />
-//   <button class="btn">Apply</button>
-// </form>
-// coupon 50off or 50OFF => 50% off
 const total = document.querySelector(".totalPrice");
 const couponForm = document.querySelector(".coupon");
 const couponInput = document.querySelector(".coupon input");
@@ -78,13 +72,24 @@ total.innerHTML = `$${totalPrice}`;
 couponBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const coupon = couponInput.value;
-  if (coupon.toUpperCase() === "50OFF") {
+  if (coupon.toUpperCase() === "50OFF" && cartFromLocalStorage.length > 0) {
     const newTotal = totalPrice / 2;
     total.innerHTML = `<span class="old-price">$${totalPrice}</span> $${newTotal}`;
     couponInput.value = "";
     displayAlert("Success", "Coupon is valid, You got 50% discount", "success");
+  } else if (
+    coupon.toUpperCase() === "50OFF" &&
+    cartFromLocalStorage.length === 0
+  ) {
+    displayAlert(
+      "Error",
+      "You should have items in your cart first, silly!",
+      "danger"
+    );
+    couponInput.value = "";
   } else {
     displayAlert("Error", "Coupon is not valid", "danger");
+    couponInput.value = "";
   }
 });
 
@@ -125,7 +130,7 @@ form.addEventListener("submit", (e) => {
     cardHolderValue === "" ||
     expiryDateValue === "" ||
     cvvValue === "";
-  if (isEmpty) {
+  if (!isEmpty) {
     displayAlert(" Error", "Please fill out all fields", "danger");
   } else {
     displayAlert("Success", "Message sent successfully", "success");
@@ -139,6 +144,8 @@ form.addEventListener("submit", (e) => {
     cardHolder.value = "";
     expiryDate.value = "";
     cvv.value = "";
+    total.innerHTML = `$${totalPrice}`;
+    couponInput.value = "";
     console.log(`
         Name: ${nameValue}
         Email: ${emailValue}
