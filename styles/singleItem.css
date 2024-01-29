@@ -123,8 +123,6 @@ p {
   cursor: not-allowed;
 }
 
-/* responsiveness */
-
 @media screen and (max-width: 768px) {
   .container {
     padding: 0 1rem;

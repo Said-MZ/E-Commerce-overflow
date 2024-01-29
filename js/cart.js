@@ -61,9 +61,36 @@ removeBtns.forEach((btn, index) => {
   });
 });
 
+// coupon and total price
+
+// <h2>Your total is: <span class="total"></span></h2>
+// <form class="coupon">
+//   <input type="text" placeholder="Coupon Code" />
+//   <button class="btn">Apply</button>
+// </form>
+// coupon 50off or 50OFF => 50% off
+const total = document.querySelector(".totalPrice");
+const couponForm = document.querySelector(".coupon");
+const couponInput = document.querySelector(".coupon input");
+const couponBtn = document.querySelector(".coupon button");
+total.innerHTML = `$${totalPrice}`;
+
+couponBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const coupon = couponInput.value;
+  if (coupon.toUpperCase() === "50OFF") {
+    const newTotal = totalPrice / 2;
+    total.innerHTML = `<span class="old-price">$${totalPrice}</span> $${newTotal}`;
+    couponInput.value = "";
+    displayAlert("Success", "Coupon is valid, You got 50% discount", "success");
+  } else {
+    displayAlert("Error", "Coupon is not valid", "danger");
+  }
+});
+
 // handle form
 
-const form = document.querySelector("form");
+const form = document.querySelector(".checkout-form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
