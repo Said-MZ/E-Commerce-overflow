@@ -71,6 +71,7 @@ nav {
 .search-form input:focus {
   border: none;
   outline: none;
+  box-shadow: none;
 }
 
 .search-form button {
